@@ -13,12 +13,14 @@ What's pentesting?
 Getting into the industry
 =========================
 
+|
+
 .. figure:: _static/hacker.jpg
     :align: center
-    :scale: 70%:
+    :scale: 50%
 
-* Many security testers have a background in black-hat work
-* Certifications/degrees can help but experience counts most
+* Often background in black-hat work
+* Certifications/degrees can help; experience counts most
 
 Pentesting Clients
 ==================
@@ -42,11 +44,10 @@ How can pentesting be done legally?
 Acceptable Use Policies
 =======================
 
-.. figure:: _static/osu_aup.png
-    :align: center
-
 **Authorized Use**
 
+.. figure:: _static/osu_aup.png
+    :align: center
 
 Tools & Techniques
 ==================
@@ -54,16 +55,39 @@ Tools & Techniques
 Metasploit
 ----------
 
+* Metasploit framework
+* Free & Open Source
+* Includes anti-forensic and evasion tools
+* Choose exploit, encoding, and payload, then execute
+  
+.. figure:: metasploit_logo.png
+    :align: center
+
 nmap
 ----
 
-
+* Network sweeps
+* network tracing
+* port scans
+* OS fingerprinting
+* version scans
+* vulnerability scans
 
 Nessus
 ------
 
+* Proprietary, integrated vulnerability scanner
+* 2.2.11 and before were GPL
+* Misconfiguration, DoS with mangled packets, default passwords, PCI DSS audit
+    * (Payment Card Industry Data Security Standard)
+
+.. figure:: _static/nessus.png
+    :align: center
+
 Wireshark
 ---------
+
+* Unsecured access points
 
 Social engineering
 ------------------
@@ -91,6 +115,12 @@ Privilege escalation
 
 Known, unpatched vulnerabilities
 --------------------------------
+
+Clueless (l)Users
+-----------------
+
+* Password reuse
+
 
 Ethical Issues
 ==============
