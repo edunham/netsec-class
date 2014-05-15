@@ -25,7 +25,7 @@ Pentesting Jobs
     :align: center
 
 * Many security testers have a background in black-hat work
-
+* Certifications/degrees can help but experience counts most
 .. note:: 
     What type of jobs are available / how does one get these jobs? 
 
@@ -45,6 +45,8 @@ Metasploit
 
 nmap
 ----
+
+
 
 Nessus
 ------
@@ -73,6 +75,23 @@ Privilege escalation
 Known, unpatched vulnerabilities
 --------------------------------
 
+Ethical Issues
+==============
+
+* Disclosing user data
+* Discovering confidential data
+* Appropriate disclosure if client doesn't fix vulnerabilities
+    * Unfixed problems can endanger client's users
+* Destructive vs. non-destructive testing
+    * DoS attacks impact users, but would be available to malicious intruders
+
+Acceptable Use Policies
+=======================
+
+.. figure:: _static/osu_aup.jpg
+    :align: center
+
+**Authorized Use**
 
 What results might be found? 
 ============================
