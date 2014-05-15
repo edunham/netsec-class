@@ -90,7 +90,7 @@ nmap
 Nessus
 ------
 
-.. note:: emily
+.. note:: dean 
 
 * Proprietary, integrated vulnerability scanner
 * 2.2.11 and before were GPL
@@ -163,8 +163,15 @@ Ethical Issues
 * Destructive vs. non-destructive testing
     * DoS attacks impact users, but would be available to malicious intruders
 
-What results might be found? 
-============================
+Results of pentesting
+=====================
+
+* CVEs
+* Security reports
+* Possible impact on users
+    * DoS
+    * Disclosure if vulnerability could have silently leaked private data
+        * heartbleed
 
 .. note:: 
     Who would discover that a vulnerability had been exploited? (pentester, DBA, sysadmins, etc.)
