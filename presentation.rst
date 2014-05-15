@@ -5,6 +5,8 @@ Pentesting
 What's pentesting? 
 ==================
 
+.. note:: emily
+
 * Legally searching a system for security vulnerabilities
 
 .. figure:: _static/whitehat_blackhat.jpg
@@ -15,6 +17,8 @@ Getting into the industry
 
 |
 
+.. note:: dean
+
 .. figure:: _static/hacker.jpg
     :align: center
     :scale: 50%
@@ -24,6 +28,8 @@ Getting into the industry
 
 Pentesting Clients
 ==================
+
+.. note:: emily
 
 * Anyone whose systems might be attacked
     * Banking
@@ -36,6 +42,8 @@ Pentesting Clients
 How can pentesting be done legally?
 ===================================
 
+.. note:: dean
+
 * Contract with owner of system
     * Legal consent to find vulnerabilities
     * Clear explanation of what may be done with discovered problems
@@ -43,6 +51,8 @@ How can pentesting be done legally?
 
 Acceptable Use Policies
 =======================
+
+.. note:: emily
 
 **Authorized Use**
 
@@ -55,6 +65,8 @@ Tools & Techniques
 Metasploit
 ----------
 
+.. note:: emily
+
 * Metasploit framework
 * Free & Open Source
 * Includes anti-forensic and evasion tools
@@ -66,6 +78,8 @@ Metasploit
 nmap
 ----
 
+.. note:: dean, with example
+
 * Network sweeps
 * network tracing
 * port scans
@@ -75,6 +89,8 @@ nmap
 
 Nessus
 ------
+
+.. note:: emily
 
 * Proprietary, integrated vulnerability scanner
 * 2.2.11 and before were GPL
@@ -87,10 +103,14 @@ Nessus
 Wireshark
 ---------
 
+.. note:: dean
+
 * Unsecured access points
 
 Social engineering
 ------------------
+
+.. note:: emily
 
 .. figure:: _static/kid_dressed_as_pilot.jpg
     :align: right
@@ -106,6 +126,8 @@ Social engineering
 Vulnerabilities
 ===============
 
+.. note:: dean
+
 * SQL injection
 * XSS
 * JS injection
@@ -113,17 +135,26 @@ Vulnerabilities
 Privilege escalation
 --------------------
 
+.. note:: emily
+
+
 Known, unpatched vulnerabilities
 --------------------------------
 
+.. note:: dean, & focusing on networking hardware / routers
+
 Clueless (l)Users
 -----------------
+
+.. note:: emily
 
 * Password reuse
 
 
 Ethical Issues
 ==============
+
+.. note:: emily
 
 * Disclosing user data
 * Discovering confidential data
