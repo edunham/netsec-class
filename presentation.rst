@@ -57,6 +57,15 @@ Wireshark
 Social engineering
 ------------------
 
+.. figure:: _static/kid_dressed_as_pilot.jpg
+    :align: right
+
+* Pretexting
+* Phishing
+* Baiting
+* Quid pro quo
+* Tailgaiting
+
 Vulnerabilities
 ===============
 
