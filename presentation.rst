@@ -23,6 +23,7 @@ Pentesting Jobs
 
 .. figure:: _static/hacker.jpg
     :align: center
+    :scale: 70%:
 
 * Many security testers have a background in black-hat work
 * Certifications/degrees can help but experience counts most
@@ -35,7 +36,9 @@ Pentesting Clients
 * Anyone whose systems might be attacked
     * Banking
     * e-commerce
-    * Governments/corporations
+    * Governments
+    * Corporations
+    * Military
 
 Tools & Techniques
 ==================
@@ -59,24 +62,21 @@ Social engineering
 
 .. figure:: _static/kid_dressed_as_pilot.jpg
     :align: right
+    :scale: 60%
 
 * Pretexting
 * Phishing
 * Baiting
+    * Stuxnet
 * Quid pro quo
 * Tailgaiting
 
 Vulnerabilities
 ===============
 
-SQL injection
--------------
-
-XSS
----
-
-JS injection
-------------
+* SQL injection
+* XSS
+* JS injection
 
 Privilege escalation
 --------------------
