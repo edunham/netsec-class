@@ -25,6 +25,8 @@ Getting into the industry
 
 * Often background in black-hat work
 * Certifications/degrees can help; experience counts most
+* CTFs
+* Bug bounties
 
 Pentesting Clients
 ==================
@@ -48,6 +50,7 @@ How can pentesting be done legally?
     * Legal consent to find vulnerabilities
     * Clear explanation of what may be done with discovered problems
     * Avoid breaking laws about disclosing sensitive data
+* Some companies offer bug bounties, reporting programs
 
 Acceptable Use Policies
 =======================
