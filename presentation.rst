@@ -187,7 +187,9 @@ Privilege escalation
 Known, unpatched vulnerabilities
 --------------------------------
 
-.. note:: dean, & focusing on networking hardware / routers.
+.. note:: Dean, & focusing on networking hardware / routers.
+          Some of the biggest exploits in history usually take advantage of known
+          unpatched vulnerabilities on the host systems.  
           
 
 * OS vulnerabilities
