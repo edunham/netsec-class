@@ -93,7 +93,7 @@ How can pentesting be done legally?
           Check acceptable use poliicies!! Do not want to get in trouble for
           not reading the fine print. 
           When reporting issues, be sure to thoroughly explain your processes.
-          1. Explanation of what the bug is.
+          1. General summary of what the bug is.
           2. Give a clear definition of the steps to repeat to make the bug
              happen again.
           3. Explain what the meaning of the bug is. How can it compromise a
@@ -239,6 +239,10 @@ Nessus
 .. note:: dean 
     long story short it's proprietary and mainly works on size of
     vulnerability databse
+ Dean. Nessus is a network scanning utility. It integrates with
+          nmap for increased coverage, as well as Hydra (a weak password
+          tester) and Nitko ( a cgi/.scripts checker) You can check for
+          misconfigurations DoS your websites, check for passwords, and more. 
 
 * Proprietary, integrated vulnerability scanner
 * 2.2.11 and before were GPL
@@ -259,6 +263,13 @@ Wireshark
     * Catch authentication handshakes for some protocols (replay attacks)
     * Fingerprint operating systems (sometimes down to browser version if
       unsecured network) to figure out what attacks to use
+     Dean. You can look for secured network points and wait for people
+      to make unencrypted requests to the router for passwords to log in.
+
+      Additionally, you may 'sniff' other unencrypted (or insecurely
+      encrypted) passwords from when people are logging in websites and
+      whatnot. Basically, Wireshark gives you the ability to look at
+      everything traveling between networks in a close radius to yourself.
 
 .. figure:: _static/wireshark.png
     :align: center
@@ -286,22 +297,20 @@ Vulnerabilities
 ===============
 
 * SQL injection
-* XSS
-* JS injection
 
 .. note:: Dean: We have discussed many of these previously, but here is another
           recap of what each of the exploits are and how to exploit them.
+    ' or 1=1; -- for strings, or 1=1; -- for not strings. (select statements)
 
-    Vertical privilege escalation requires the attacker to grant himself
-    higher privileges.
+* XSS
 
-     Horizontal privilege escalation requires the attacker to use the same level
-     of privileges he already has been granted, but assume the identity of another
-     user with similar privileges. 
-    (http://searchsecurity.techtarget.com/definition/privilege-escalation-attack)
+.. note:: Link a script that you input, in a section that may be rendered by
+          unknowing users. (Hint: Comments!)
 
-    When attacking Unix systems, look for writable set UID files, unmounted
-    filesystems, dev tools...
+* CSRF
+
+.. note:: Use someone else's validated session to perform actions on their
+          behalf without their knowing of it.
 
 Clueless (l)users
 -----------------
@@ -348,8 +357,44 @@ Known, unpatched vulnerabilities
     :scale: 60%
 
 * OS vulnerabilities
+
+.. note:: 
+    Vertical privilege escalation requires the attacker to grant himself
+    higher privileges.
+
+     Horizontal privilege escalation requires the attacker to use the same level
+     of privileges he already has been granted, but assume the identity of another
+     user with similar privileges. 
+    (http://searchsecurity.techtarget.com/definition/privilege-escalation-attack)
+
+    When attacking Unix systems, look for writable set UID files, unmounted
+    filesystems, dev tools...
+
+
+
+.. note:: insecure file creation vulnerability. A broken application may try to
+          create a temporary file in a public writeable directory (e. g. /tmp) 
+          without forcing create-only. The attacker will create a symlink 
+          pointing elsewhere (where the attacker does not have write 
+          permission). The vulnerable application will overwrite the target 
+          file (e. g. /home/someuser/.profile for normal users and a system file for root).
+
 * Web server vulnerabilities
+
+.. note:: Heartbleed; what it is, how it works briefly.
+          What: Heartbleed allows you to send a vulnerable server some data,
+                but if you ask for more bytes back than what you send as
+                your first message, you'll start reading from RAM! This
+                can expose anything in memory: private keys, certs, look
+                at encrypted data from other connected users.
+
 * Web development frameworks
+
+.. note:: Your web development frameworks, that interact with web servers
+          can also be vulnerable. A recent vulnerability in the common Ruby
+          on Rails web framework could potentially allow an attacker to malform
+          a dynamic directory for a file to render, and instead point somewhere
+          else. This is an input sanitization issue.
 
 .. figure:: _static/heartbleed_vulns.png
     :align: center
