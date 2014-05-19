@@ -120,6 +120,49 @@ Acceptable Use Policies
 .. figure:: _static/osu_aup.png
     :align: center
 
+.. note:: There's always that clause 
+
+    Entry into a system, including the network system,
+    by individuals not specifically authorized (by
+    group or personally) or attempts to circumvent the
+    protective mechanisms of any University
+    system are prohibited.
+    (http://oregonstate.edu/senate/agen/2006/aupcurrent.pdf)
+
+    **All users of University computing resources must**
+
+    Use only those computing resources that they are authorized to use and use
+    them only in the manner and to the extent authorized.
+
+    Refrain from unauthorized attempts to circumvent the security mechanisms
+    of any University system.
+
+    When using University computing resources to access non-University
+    resources, observe the acceptable use policies of those non-University
+    organizations
+
+    from http://oregonstate.edu/fa/manuals/gen/computing-resources
+
+Acceptable Use Policies
+-----------------------
+
+.. figure:: _static/aws.png
+    :align: center
+
+.. note:: emily
+
+    Says that because penetration is "frequently indistinguishable from"
+    security violations & network abuse, one needs permission
+
+    https://aws.amazon.com/security/penetration-testing/
+
+    Permission is required for all penetration tests.
+
+    To request permission, you must be logged into the AWS portal
+
+    (& restrictions on instance types from which you can pentest)
+
+
 Tools & Techniques
 ==================
 
