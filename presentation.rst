@@ -179,7 +179,28 @@ Metasploit
 .. figure:: _static/metasploit_logo.png
     :align: center
 
-nmap (pt 1)
+.. note:: 
+
+    
+    Choosing and configuring an exploit (code that enters a target system by
+    taking advantage of one of its bugs; about 900 different exploits for Windows,
+    Unix/Linux and Mac OS X systems are included);
+    
+    Optionally checking whether the intended target system is susceptible to 
+    the chosen exploit;
+
+    Choosing and configuring a payload (code that will be executed on the 
+    target system upon successful entry; for instance, a remote shell or a 
+    VNC server);
+    
+    Choosing the encoding technique so that the intrusion-prevention system 
+    (IPS) ignores the encoded payload;
+    
+    Executing the exploit.
+
+    **Need some info about OS and network config to choose correct payload**
+
+nmap
 ----
 
 .. note:: Dean, with example. nmap is a very powerful tool. Most of the
@@ -200,8 +221,8 @@ nmap (pt 1)
 * version scans
 * vulnerability scans
 
-nmap (screenshot)
------------------
+nmap
+----
 
 .. figure:: _static/nmap_example.png
     :align: center
@@ -225,6 +246,7 @@ Wireshark
 .. note:: dean
 
 * Unsecured access points
+* Mis-configured networks can leave passwords visible
 
 Social engineering
 ------------------
@@ -236,7 +258,7 @@ Social engineering
     :scale: 60%
 
 * Pretexting
-* Phishing
+* Phishing (& "spear phishing")
 * Baiting
     * Stuxnet
 * Quid pro quo
@@ -261,9 +283,7 @@ Privilege escalation
 Known, unpatched vulnerabilities
 --------------------------------
 
-.. note:: Dean, & focusing on networking hardware / routers.
-          Some of the biggest exploits in history usually take advantage of known
-          unpatched vulnerabilities on the host systems.  
+.. note:: dean, & focusing on networking hardware / routers.
           
 
 * OS vulnerabilities
