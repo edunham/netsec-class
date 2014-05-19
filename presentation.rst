@@ -12,6 +12,24 @@ What's pentesting?
 .. figure:: _static/whitehat_blackhat.jpg
     :align: center
 
+.. note:: Penetration Testing -- Find prospective vulnerabilities and then
+    verify that an attacker could exploit them
+    
+    Includes automatic or manual vulnerability scans plus other techniques
+
+    * Targeted testing -- whitebox, cooperative with internal teams
+    * External testing -- Done from outside the network
+        * Misses what if attacker is a company insider
+        * How far could a malicious external party break in?
+    * Internal testing -- Simulate disgruntled employee w/ standard access
+        * Disgruntled sysadmin? You're out of luck
+    * Blind testing -- black-box
+        * Only have company name + any tech blogs / logs about infra
+    * Double Blind testing -- most of company isn't aware of test
+        * Makes social engineering techniques more effective
+
+    (from http://searchsoftwarequality.techtarget.com/definition/penetration-testing) 
+
 Getting into the industry
 =========================
 
