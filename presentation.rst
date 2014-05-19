@@ -57,6 +57,21 @@ How can pentesting be done legally?
 ===================================
 
 .. note:: dean
+          Check with site owners, or look for a bug bounty program.
+          Check acceptable use poliicies!! Do not want to get in trouble for
+          not reading the fine print. 
+          When reporting issues, be sure to thoroughly explain your processes.
+          1. Explanation of what the bug is.
+          2. Give a clear definition of the steps to repeat to make the bug
+             happen again.
+          3. Explain what the meaning of the bug is. How can it compromise a
+             a system.
+          4. Explain ways to fix the bug. 
+
+          Most of all, be sure to disclose the bug to the company first,
+          and give ample time for the company to respond to your original
+          disclosure before disclosing the bug to public (especially if it
+          discloses sensitive information).
 
 * Contract with owner of system
     * Legal consent to find vulnerabilities
@@ -156,7 +171,8 @@ Social engineering
 Vulnerabilities
 ===============
 
-.. note:: dean
+.. note:: Dean: We have discussed many of these previously, but here is another
+          recap of what each of the exploits are and how to exploit them.
 
 * SQL injection
 * XSS
@@ -171,9 +187,12 @@ Privilege escalation
 Known, unpatched vulnerabilities
 --------------------------------
 
-.. note:: dean, & focusing on networking hardware / routers
+.. note:: dean, & focusing on networking hardware / routers.
+          
 
-* 
+* OS vulnerabilities
+* Web server vulnerabilities
+* Web development frameworks
 
 Clueless (l)Users
 -----------------
