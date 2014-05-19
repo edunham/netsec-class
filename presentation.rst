@@ -15,9 +15,21 @@ What's pentesting?
 Getting into the industry
 =========================
 
-|
-
-.. note:: dean
+.. note:: Dean. Getting into the pen-testing / the computer security focused 
+          industry is not too difficult. It used to be that many 'hackers'
+          as portrayed by the media were black-hat, and often got into the
+          industry by breaking systems without permission. Since then,
+          there have been many improvements to our current systems of 
+          reporting bugs without getting in trouble, such as bug bounties.
+          This allows people to try and find security vulnerabilities in 
+          applications such as Facebook, Google, etc. and report them for
+          a monetary reward. Before, people may try and break systems and
+          instead of being rewarded, be attacked by the industry for finding
+          the bugs without permission in the first place. Other ways of getting
+          into industry are getting certifications, proving you know what
+          you're doing. However, getting real clients, or getting involved with
+          a good consulting company usually requires more than just certification;
+          experience is the most valuable.
 
 .. figure:: _static/hacker.jpg
     :align: center
@@ -75,13 +87,22 @@ Metasploit
 * Includes anti-forensic and evasion tools
 * Choose exploit, encoding, and payload, then execute
   
-.. figure:: metasploit_logo.png
+.. figure:: _static/metasploit_logo.png
     :align: center
 
-nmap
+nmap (pt 1)
 ----
 
-.. note:: dean, with example
+.. note:: Dean, with example. nmap is a very powerful tool. Most of the
+          features it provides help assess the vulnerability of networks.
+          Some of these include:
+          1. What computers did you find running on the local network?
+          2. What IP addresses did you find running on the local network?
+          3. What is the operating system of your target machine?
+          4. Find out what ports are open on the machine that you just scanned?
+          5. Find out if the system is infected with malware or virus.
+          6. Search for unauthorized servers or network service on your network.
+          7. Find and remove computers which don't meet the organization's minimum level of security.
 
 * Network sweeps
 * network tracing
@@ -89,6 +110,12 @@ nmap
 * OS fingerprinting
 * version scans
 * vulnerability scans
+
+nmap (screenshot)
+-----------------
+
+.. figure:: _static/nmap_example.png
+    :align: center
 
 Nessus
 ------
@@ -146,6 +173,8 @@ Known, unpatched vulnerabilities
 
 .. note:: dean, & focusing on networking hardware / routers
 
+* 
+
 Clueless (l)Users
 -----------------
 
@@ -168,6 +197,8 @@ Ethical Issues
 
 Results of pentesting
 =====================
+
+.. note:: emily
 
 * CVEs
 * Security reports
