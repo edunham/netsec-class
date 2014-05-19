@@ -63,12 +63,25 @@ Pentesting Clients
 
 .. note:: emily
 
+.. figure:: _static/magnifying_glass_on_password.jpg
+    :align: center
+
 * Anyone whose systems might be attacked
     * Banking
     * e-commerce
     * Governments
     * Corporations
     * Military
+
+.. note:: Anyone who has a large software deployment in the wild and might
+    face malicious intruders needs it
+
+    Any company building/selling product with security claims, ie firewall
+    or operating system code, also needs to audit and rigorously test
+    deployments of their product
+
+    Also open source projects related to network security (ie Tomato the
+    router firmware) really ought to pentest themselves.
 
 
 How can pentesting be done legally?
