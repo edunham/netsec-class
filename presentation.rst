@@ -180,7 +180,6 @@ Metasploit
     :align: center
 
 .. note:: 
-
     
     Choosing and configuring an exploit (code that enters a target system by
     taking advantage of one of its bugs; about 900 different exploits for Windows,
@@ -274,11 +273,36 @@ Vulnerabilities
 * XSS
 * JS injection
 
-Privilege escalation
---------------------
+.. note:: 
+
+    Vertical privilege escalation requires the attacker to grant himself
+    higher privileges.
+
+     Horizontal privilege escalation requires the attacker to use the same level
+     of privileges he already has been granted, but assume the identity of another
+     user with similar privileges. 
+    (http://searchsecurity.techtarget.com/definition/privilege-escalation-attack)
+
+    When attacking Unix systems, look for writable set UID files, unmounted
+    filesystems, dev tools...
+
+Clueless (l)users
+-----------------
 
 .. note:: emily
 
+.. figure:: _static/bad_at_computer.jpg
+    :align: right
+
+* Password reuse 
+    * Bad passwords
+    * Writing them down
+* Lost devices
+    * VPN access
+    * Email
+    * Saved passwords
+* Failure to log out / lock screen
+* Disgruntled employees
 
 Known, unpatched vulnerabilities
 --------------------------------
@@ -302,14 +326,6 @@ vulnerable
 
 .. note:: Bottom image is from https://zmap.io/heartbleed/ and is "Historical
     Trend of Vulnerable HTTPS Enabled Alexa Top 1 Million Websites"
-
-Clueless (l)Users
------------------
-
-.. note:: emily
-
-* Password reuse
-
 
 Ethical Issues
 ==============
