@@ -1,16 +1,16 @@
-==========
-Pentesting
-==========
+===========================
+Network Penetration Testing
+===========================
 
 What's pentesting? 
 ==================
 
 .. note:: emily
-
-* Legally searching a system for security vulnerabilities
-
+|
 .. figure:: _static/whitehat_blackhat.jpg
     :align: center
+
+* Legally searching a system for security vulnerabilities
 
 .. note:: Penetration Testing -- Find prospective vulnerabilities and then
     verify that an attacker could exploit them
@@ -60,11 +60,12 @@ Getting into the industry
 
 Pentesting Clients
 ==================
-
+|
 .. note:: emily
 
 .. figure:: _static/magnifying_glass_on_password.jpg
     :align: center
+    :scale: 60%
 
 * Anyone whose systems might be attacked
     * Banking
@@ -103,6 +104,10 @@ How can pentesting be done legally?
           and give ample time for the company to respond to your original
           disclosure before disclosing the bug to public (especially if it
           discloses sensitive information).
+
+.. figure:: _static/bugbounty.png
+    :align: right
+    :scale: 50%
 
 * Contract with owner of system
     * Legal consent to find vulnerabilities
@@ -149,7 +154,7 @@ Acceptable Use Policies
 .. figure:: _static/aws.png
     :align: center
 
-.. note:: emily
+.. note:: emily    | **AMAZON**
 
     Says that because penetration is "frequently indistinguishable from"
     security violations & network abuse, one needs permission
@@ -165,11 +170,13 @@ Acceptable Use Policies
 
 Tools & Techniques
 ==================
+|
+.. figure:: _static/toolbag.jpg
+    :align: center
 
 Metasploit
 ----------
 
-.. note:: emily
 
 * Metasploit framework
 * Free & Open Source
@@ -179,7 +186,7 @@ Metasploit
 .. figure:: _static/metasploit_logo.png
     :align: center
 
-.. note:: 
+.. note:: Emily 
     
     Choosing and configuring an exploit (code that enters a target system by
     taking advantage of one of its bugs; about 900 different exploits for Windows,
@@ -230,6 +237,8 @@ Nessus
 ------
 
 .. note:: dean 
+    long story short it's proprietary and mainly works on size of
+    vulnerability databse
 
 * Proprietary, integrated vulnerability scanner
 * 2.2.11 and before were GPL
@@ -241,8 +250,18 @@ Nessus
 
 Wireshark
 ---------
-
+|
 .. note:: dean
+    Use Wireshark to find weak networks
+
+    * Device (almost) always has same MAC (Media Access Control address)
+        * Use this to see who's who across networks, correlate person to IP
+    * Catch authentication handshakes for some protocols (replay attacks)
+    * Fingerprint operating systems (sometimes down to browser version if
+      unsecured network) to figure out what attacks to use
+
+.. figure:: _static/wireshark.png
+    :align: center
 
 * Unsecured access points
 * Mis-configured networks can leave passwords visible
@@ -266,14 +285,12 @@ Social engineering
 Vulnerabilities
 ===============
 
-.. note:: Dean: We have discussed many of these previously, but here is another
-          recap of what each of the exploits are and how to exploit them.
-
 * SQL injection
 * XSS
 * JS injection
 
-.. note:: 
+.. note:: Dean: We have discussed many of these previously, but here is another
+          recap of what each of the exploits are and how to exploit them.
 
     Vertical privilege escalation requires the attacker to grant himself
     higher privileges.
@@ -290,6 +307,17 @@ Clueless (l)users
 -----------------
 
 .. note:: emily
+
+    * Password reuse 
+        * Bad passwords
+        * Writing them down
+    * Lost devices
+        * VPN access
+        * Email
+        * Saved passwords
+    * Failure to log out / lock screen
+    * Disgruntled employees
+
 
 .. figure:: _static/bad_at_computer.jpg
     :align: right
@@ -310,9 +338,14 @@ Known, unpatched vulnerabilities
 .. note:: dean, & focusing on networking hardware / routers.
     Some of the biggest exploits in history usually take advantage of known
     unpatched vulnerabilities on the host systems.  
-         
+    
+    Bottom image is from https://zmap.io/heartbleed/ and is "Historical
+    Trend of Vulnerable HTTPS Enabled Alexa Top 1 Million Websites"
+
+
 .. figure:: _static/heartbleed.jpg
     :align: right
+    :scale: 60%
 
 * OS vulnerabilities
 * Web server vulnerabilities
@@ -323,9 +356,6 @@ Known, unpatched vulnerabilities
 
 Scroll down on https://zmap.io/heartbleed/ for a list of sites still
 vulnerable
-
-.. note:: Bottom image is from https://zmap.io/heartbleed/ and is "Historical
-    Trend of Vulnerable HTTPS Enabled Alexa Top 1 Million Websites"
 
 Ethical Issues
 ==============
@@ -342,8 +372,6 @@ Ethical Issues
 Results of pentesting
 =====================
 
-.. note:: emily
-
 * CVEs
 * Security reports
     * Threat level modeling
@@ -352,7 +380,7 @@ Results of pentesting
     * Disclosure if vulnerability could have silently leaked private data
         * heartbleed
 
-.. note:: 
+.. note:: emily 
     Who would discover that a vulnerability had been exploited? (pentester, DBA, sysadmins, etc.)
 
     CVE = Common Vulnerability Exposure
