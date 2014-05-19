@@ -284,11 +284,24 @@ Known, unpatched vulnerabilities
 --------------------------------
 
 .. note:: dean, & focusing on networking hardware / routers.
-          
+    Some of the biggest exploits in history usually take advantage of known
+    unpatched vulnerabilities on the host systems.  
+         
+.. figure:: _static/heartbleed.jpg
+    :align: right
 
 * OS vulnerabilities
 * Web server vulnerabilities
 * Web development frameworks
+
+.. figure:: _static/heartbleed_vulns.png
+    :align: center
+
+Scroll down on https://zmap.io/heartbleed/ for a list of sites still
+vulnerable
+
+.. note:: Bottom image is from https://zmap.io/heartbleed/ and is "Historical
+    Trend of Vulnerable HTTPS Enabled Alexa Top 1 Million Websites"
 
 Clueless (l)Users
 -----------------
