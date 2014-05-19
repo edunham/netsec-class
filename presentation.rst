@@ -2,6 +2,12 @@
 Network Penetration Testing
 ===========================
 
+**"Don't giggle, we're all grownups here"**
+
+|
+
+(Mike said we needed a provocative title)
+
 What's pentesting? 
 ==================
 
