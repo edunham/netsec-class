@@ -346,6 +346,7 @@ Results of pentesting
 
 * CVEs
 * Security reports
+    * Threat level modeling
 * Possible impact on users
     * DoS
     * Disclosure if vulnerability could have silently leaked private data
@@ -353,6 +354,10 @@ Results of pentesting
 
 .. note:: 
     Who would discover that a vulnerability had been exploited? (pentester, DBA, sysadmins, etc.)
+
+    CVE = Common Vulnerability Exposure
+
+    http://nvd.nist.gov/
 
     How would the pentester's results be presented?
 
