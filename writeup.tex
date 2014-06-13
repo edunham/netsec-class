@@ -1,7 +1,6 @@
 \documentclass{article}
-\usepackage[cm]{fullpage}
-\title{Pentesting}
-%\subtitle{ECE478 Network Security}
+\usepackage{fullpage}
+\title{Pentesting\\ECE478 Network Security}
 \author{Dean Johnson \& Emily Dunham}
 \linespread{1.5}
 
@@ -13,6 +12,43 @@
 attempt to gain access to a system using only the tools and knowledge available
 to a malicious attacker, but with the system's owner's consent
 \cite{whatispentest}. 
+
+Pentesting includes automatic vulnerability scanning, manual testing, and a
+variety of other techniques that mimic those which would be used by malicious
+attackers. 
+
+\subsection{Types of tests}
+
+{\bf Targeted testing} is a form of ``white box" testing in which testers work with
+the client's internal teams who maintain the product being tested. This can
+help simulate the level of knowledge and access available to an attacker such
+as a disgruntled employee. 
+
+{\bf External testing} explores how far an external attacker could get into a
+client's systems by performing an attack from outside the company's network
+and systems, trying to break in. External testing usually involves giving the
+tester some special knowledge about the systems, which might not be available
+to all malicious attackers. 
+
+{\bf Internal testing} seeks ways that a disgruntled employee could escalate
+the priveliges of standard system access in order to harm the customer's
+systems. 
+
+In {\bf blind testing}, the tester is given minimal information about the
+network being tested. They will know the company's name, which can be used to
+explore tech blogs, social networking sites, press releases, and any other
+disclosures of information -- however, the tester knows no more than a
+malicious attacker from outside the company would. 
+
+For all of the above types of tests, it's assumed that all of the relevant
+personnel inside the client company will be aware that the tests are being
+performed. However, in {\bf double blind testing}, the client's teams who run
+the systems being tested are not informed that the test is taking place.
+Double blind is the only form of testing which can accurately predict the
+client's response to a real attack, since in all other forms of testing people
+are warned about the test and will be more vigilant during the testing period. 
+
+
 
 \section{How can pentesting be done legally?}
 
