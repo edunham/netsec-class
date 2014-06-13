@@ -1,4 +1,4 @@
-\documentclass[12pt]{article}
+\documentclass{report}
 \usepackage{fullpage}
 \title{Pentesting\\ECE478 Network Security}
 \author{Dean Johnson \& Emily Dunham}
@@ -213,14 +213,14 @@ login form probably has a SQL query that looks something like this:
     SELECT * FROM users WHERE username='\%s' AND password='\%s';
 \end{verbatim}
 
-If we then pass in a username that looks like "admin'; --", we effectively
+If we then pass in a username that looks like ``admin'; --", we effectively
 make the statement look like this:
 
 \begin{verbatim}
     SELECT * FROM users WHERE username='admin'; -- AND password='\%s';
 \end{verbatim}
 
-Since "--" escapes the rest of the statement, we then don't need a password,
+Since ``--" escapes the rest of the statement, we then don't need a password,
 and are authenticated as the admin user.
 
 This obviously can have huge reprocutions. With statements that use SELECT and
@@ -276,10 +276,20 @@ permission). The vulnerable application will overwrite the target
 file (e. g. /home/someuser/.profile for normal users and a system files for 
 root), giving them access to automatically run malicious code on the server.
 
-\section{What results might be found? }
+\section{After Testing}
 
-\section{What actions would be taken by the company as a result?}
+After finding vulnerabilities and exploiting them to the extent specified in
+the initial contract, the pentesting organization will present a report to the
+client. 
 
+If pentesting has revealed a bug in software that's used by others, a Common
+Vulnerability Exposure (CVE) would be published. Published CVEs are available
+from the National Vulnerability Database\cite{nvd}. 
+
+In reporting which vulnerabilities were available, pentesters often make
+security suggestions to the client. This can include advice on applying
+patches to known bugs, and strategic changes to mitigate the effects of
+unpatched vulnerabilities. 
 
 \newpage
 \begin{thebibliography}{1}
@@ -295,5 +305,7 @@ root), giving them access to automatically run malicious code on the server.
     \bibitem{insidetrust} http://insidetrust.blogspot.com/2011/01/penetration-testing-permission.html
     \bibitem{mostcommonvulnerability}
         http://www.sans.org/top25-software-errors/
+
+    \bibitem{nvd} http://nvd.nist.gov/
 \end{thebibliography}
 \end{document}
