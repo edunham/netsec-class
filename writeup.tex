@@ -7,7 +7,7 @@
 \begin{document}
 
 \maketitle
-\section{What's pentesting? }
+\section*{What's pentesting? }
     Penetration testing is the occupation of those security professionals who
 attempt to gain access to a system using only the tools and knowledge available
 to a malicious attacker, but with the system's owner's consent
@@ -17,7 +17,7 @@ Pentesting includes automatic vulnerability scanning, manual testing, and a
 variety of other techniques that mimic those which would be used by malicious
 attackers. 
 
-\subsection{Types of tests\cite{definition}}
+\subsection*{Types of tests\cite{definition}}
 
 {\bf Targeted testing} is a form of ``white box" testing in which testers work with
 the client's internal teams who maintain the product being tested. This can
@@ -48,7 +48,7 @@ Double blind is the only form of testing which can accurately predict the
 client's response to a real attack, since in all other forms of testing people
 are warned about the test and will be more vigilant during the testing period. 
 
-\section{Pentesting Clients}
+\section*{Pentesting Clients}
 
 Any company or organization who could be harmed by a malicious attack on their
 computer systems can benefit from penetration testing. Some of the most common
@@ -62,7 +62,7 @@ product pentested before release. Open source projects related to network
 security, such as the router firmware project Tomato, generally get some level
 of security testing from ordinary attacks against their users' deployments. 
 
-\section{How can pentesting be done legally?}
+\section*{How can pentesting be done legally?}
 
 The two key differences between pentesters and malicious attackers are that
 the pentester attacks a system only with its owner's consent, and the
@@ -75,7 +75,7 @@ optionally be given additional information about the system, to help guide
 their attacks by avoiding time that would otherwise be wasted in gaining those
 basic facts. 
 
-\subsection{Acceptable Use Policies}
+\subsection*{Acceptable Use Policies}
 
 As an example, OSU's AUP contains the wording: 
 
@@ -102,7 +102,7 @@ necessarily match the same profiles as illegal attacks\cite{aws}.
 
 
 
-\section{Jobs in the field} 
+\section*{Jobs in the field} 
 
 Getting into the pen-testing / computer security industry is not too difficult.
 It used to be that many 'hackers', as portrayed by the media anyways, were
@@ -123,11 +123,11 @@ certifications, to prove you know what you're doing. However, getting real
 clients yourself, or getting involved with a good consulting company usually
 requires more than just certification; experience is the most valuable.
 
-\section{Targets/Clients}
+\section*{Targets/Clients}
 
-\section{Tools \& Techniques}
+\section*{Tools \& Techniques}
 
-\subsection{Metasploit}
+\subsection*{Metasploit}
 
 Metasploit is a collection of tools, the most popular of which is the free and
 open source Metasploit Framework. The framework breaks down the task of
@@ -156,7 +156,7 @@ correctly, the payload code will run on the target system. To minimize
 guesswork and wasted time, a pentester needs to know some basic information
 about the operating system and network configuration of the target system. 
 
-\subsection{NMAP}
+\subsection*{NMAP}
 
 Nmap is another tool in every pen-tester's arsenal. At it's most primitive
 levels, it's a port scanner. However, it has so many more features than just
@@ -180,7 +180,7 @@ target host. Since we enabled the -v option, it also returns version numbers
 for each of those applications, so we can look for unpatched vulnerabilities
 available for exploit on the server.
 
-\subsection{Nessus}
+\subsection*{Nessus}
 
 Nessus is a (now) proprietary piece of software. For versions 2.2.11 and below,
 they were GPL licenced, and the source code was available online. Nessus is
@@ -191,11 +191,11 @@ integrate them all together. Nesses also has some features unique to itself,
 like checking server misconfigurations, denial of service attacks and
 PCI DSS (Payment Card Industry Data Security Standard) Audits.
 
-\subsection{Social engineering}
+\subsection*{Social engineering}
 
-\section{Vulnerabilities}
+\section*{Vulnerabilities}
 
-\subsection{SQL injection}
+\subsection*{SQL injection}
 
 The most common type of exploited vulnerability according to
 \cite{mostcommonvulnerability} is SQL Injection. SQL Injection is a technique
@@ -234,7 +234,7 @@ into your SQL statements that can give unintended results. So, as easy as it
 is to make the mistake of leaving this open as a vulnerability, it's also
 incredibly easy to patch.
 
-\subsection{XSS}
+\subsection*{XSS}
 
 Cross-site scripting (XSS) is another fairly common web application
 vulnerability. Similarly to SQL Injection, what you essentially do is format
@@ -247,7 +247,7 @@ can cause a lot of harm when a script is loaded that steals session tokens,
 cookies, or other data stored in your browser that can allow an attacker to
 impersonate you on other sites. 
 
-\subsection{Privilege Escalation}
+\subsection*{Privilege Escalation}
 
 Another type of vulnerability, not specifically on the web application side of
 things, is privilege escalation. This usually happens on the OS level and 
@@ -263,10 +263,10 @@ The other type of privilege escalation is horizontal. This is when an attacker
 uses the same level of privileges he already has, but assumes the identify of
 another user with the same privileges. For example, if a developer and system
 administrator both have root on a box and the box is using a shared file
-system for all users, th developer could "sudo su" as the system administrator,
+system for all users, th developer could ``sudo su" as the system administrator,
 and have access to all of his/her files, keys, and other sensitive information.
 
-\subsection{Insecure File Creation}
+\subsection*{Insecure File Creation}
 
 Another system level vulnerability is insecure file creation. A broken 
 application may try to create a temporary file in a public writeable directory
@@ -276,7 +276,7 @@ permission). The vulnerable application will overwrite the target
 file (e. g. /home/someuser/.profile for normal users and a system files for 
 root), giving them access to automatically run malicious code on the server.
 
-\section{After Testing}
+\section*{After Testing}
 
 After finding vulnerabilities and exploiting them to the extent specified in
 the initial contract, the pentesting organization will present a report to the
