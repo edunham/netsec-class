@@ -104,6 +104,25 @@ necessarily match the same profiles as illegal attacks\cite{aws}.
 
 \section{Jobs in the field} 
 
+Getting into the pen-testing / computer security industry is not too difficult.
+It used to be that many 'hackers', as portrayed by the media anyways, were
+black-hat, and often got into the industry by breaking systems without 
+permission. However, in recent years their have been many improvements to our
+current systems of reporting bugs. One such improvement has been bug bounties.
+
+Bug bounty programs are set up by many well known companies, such as Facebook,
+Google, Yahoo, and many more. These programs allow security researchers to try
+and find security vulnerabilities in these companies systems and report them
+for a financial reward. Before, people may have tried to find vulnerabilities
+in systems for these companies without permission, and instead of being
+rewarded, legal action was often taken against the hacker (even if the hacker
+had good intentions). 
+
+Another way of getting into the computer security industry is getting 
+certifications, to prove you know what you're doing. However, getting real
+clients yourself, or getting involved with a good consulting company usually
+requires more than just certification; experience is the most valuable.
+
 \section{Targets/Clients}
 
 \section{Tools \& Techniques}
@@ -139,20 +158,123 @@ about the operating system and network configuration of the target system.
 
 \subsection{NMAP}
 
+Nmap is another tool in every pen-tester's arsenal. At it's most primitive
+levels, it's a port scanner. However, it has so many more features than just
+port scanning. By using nmap, you can find which computers are on a network,
+what operating system (and version) those computers are running, the programs
+(and their versions) running on those computers, and ports that are open on 
+those computers as well. Using nmap, it makes it easy to do a system-wide 
+assessment of the security on a network, and helps you lock down systems that 
+are vulnerable.
+
+A basic example of using nmap may look like this:
+
+\begin{quote}
+    nmap -v -A \textit{host(s)}
+\end{quote}
+
+What this does is run nmap with the verbose and application flags turned on,
+against a given host. Verbose means it will return extra information for each 
+of the scripts it runs, and -A ensures it returns applications running on the
+target host. Since we enabled the -v option, it also returns version numbers
+for each of those applications, so we can look for unpatched vulnerabilities
+available for exploit on the server.
 
 \subsection{Nessus}
 
+Nessus is a (now) proprietary piece of software. For versions 2.2.11 and below,
+they were GPL licenced, and the source code was available online. Nessus is
+sort of like a type of swiss army knife of network security tools. Is has
+a very unique pluggable architecture which allows you to take tools like
+nmap, Hydra (a weak password checker) and Nitko (a cgi/.scripts checker) and
+integrate them all together. Nesses also has some features unique to itself,
+like checking server misconfigurations, denial of service attacks and
+PCI DSS (Payment Card Industry Data Security Standard) Audits.
+
 \subsection{Social engineering}
+
+\section{Vulnerabilities}
 
 \subsection{SQL injection}
 
+The most common type of exploited vulnerability according to
+\cite{mostcommonvulnerability} is SQL Injection. SQL Injection is a technique
+that relies on formatting your input to a form that is sent to a database in
+such a way that gives you either unauthorized permissions, or a view of more
+data than intended. For example, if you have a login form, and know there's
+an account named admin, you can specially format an input string to bypass
+checking the password to the account if the SQL is not properly escaped.
+
+We do this by making an educated guess at what the SQL query may look like,
+then formatting it to do something other an intended. For example, a typical
+login form probably has a SQL query that looks something like this:
+
+\begin{quote}
+    SELECT * FROM users WHERE username='\%s' AND password='\%s';
+\end{quote}
+
+If we then pass in a username that looks like "admin'; --", we effectively
+make the statement look like this:
+
+\begin{quote}
+    SELECT * FROM users WHERE username='admin'; -- AND password='\%s';
+\end{quote}
+
+Since "--" escapes the rest of the statement, we then don't need a password,
+and are authenticated as the admin user.
+
+This obviously can have huge reprocutions. With statements that use SELECT and
+display data from it, you can essentially format strings to get a dump of the
+database. This can include passwords and other sensitive information, which
+is why this vulnerability so critical to be aware of in your applications.
+
+So, how do you prevent SQL Injection? The only thing you have to do is escape
+your user inputs. This includes ignoring any characters that may be 'injected'
+into your SQL statements that can give unintended results. So, as easy as it
+is to make the mistake of leaving this open as a vulnerability, it's also
+incredibly easy to patch.
+
 \subsection{XSS}
 
-\subsection{JS injection}
+Cross-site scripting (XSS) is another fairly common web application
+vulnerability. Similarly to SQL Injection, what you essentially do is format
+an input string that when displayed to another user, can cause harm to them.
 
-\subsection{Privilege escalation}
+For example, if we are tweeting out to the world and try to include <script>
+in our tweet it escapes the <script> and doesn't ACTUALLY load a script
+like the browser usually would when displaying your tweet to other users. This
+can cause a lot of harm when a script is loaded that steals session tokens,
+cookies, or other data stored in your browser that can allow an attacker to
+impersonate you on other sites. 
 
-\subsection{Known, unpatched vulnerabilities}
+\subsection{Privilege Escalation}
+
+Another type of vulnerability, not specifically on the web application side of
+things, is privilege escalation. This usually happens on the OS level and 
+essentially means you gain access data which you are not supposed to have
+access to. There are two types of privilege escalation.
+
+The first is vertical privilege escalation. Vertical privilege escalation 
+is when an attacker grants himself higher privileges than he is supposed to
+have. An example of this is a developer granting himself root on a server 
+where he is only is only supposed to have a basic level of access.
+
+The other type of privilege escalation is horizontal. This is when an attacker
+uses the same level of privileges he already has, but assumes the identify of
+another user with the same privileges. For example, if a developer and system
+administrator both have root on a box and the box is using a shared file
+system for all users, th developer could "sudo su" as the system administrator,
+and have access to all of his/her files, keys, and other sensitive information.
+
+\subsection{Insecure File Creation}
+
+Another system level vulnerability is insecure file creation. A broken 
+application may try to create a temporary file in a public writeable directory
+(e. g. /tmp) without forcing create-only. The attacker then can create a 
+symlink pointing elsewhere (where the attacker does not have write
+permission). The vulnerable application will overwrite the target
+file (e. g. /home/someuser/.profile for normal users and a system files for 
+root), giving them access to automatically run malicious code on the server.
 
 \section{What results might be found? }
 
@@ -169,5 +291,7 @@ about the operating system and network configuration of the target system.
     \bibitem{securitycurrent}
         http://www.securitycurrent.com/en/writers/mark-rasch/legal-issues-in-penetration-testing
     \bibitem{insidetrust} http://insidetrust.blogspot.com/2011/01/penetration-testing-permission.html
+    \bibitem{mostcommonvulnerability}
+        http://www.sans.org/top25-software-errors/
 \end{thebibliography}
 \end{document}
