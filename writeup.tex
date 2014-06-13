@@ -108,6 +108,40 @@ necessarily match the same profiles as illegal attacks\cite{aws}.
 
 \section{Tools \& Techniques}
 
+\subsection{Metasploit}
+
+Metasploit is a collection of tools, the most popular of which is the free and
+open source Metasploit Framework. The framework breaks down the task of
+executing foreign code on a remote system into 4 simple steps, each of which
+is configurable based on your use case. 
+
+First, select an exploit. An exploit is simply a piece of code that takes
+advantage of a bug in the target system. The Metasploit Framework comes with
+over 900 exploits for Windows, Unix, Linux, and Mac systems. The framework can
+optionally check whether the target system's version and specific
+configuration are vulnerable to the selected exploit. All the exploit does is
+allow you to run an arbitrary piece of code - choosing what that code does is
+the next step.
+
+Next, select a payload. The payload is the code that gets run on the target
+system once the exploit succeeds. The payload could be as simple as a wall
+message or fork bomb, or as complex as a VNC server. 
+
+At this point, the combination of exploit and payload can be easily detected
+by intrusion prevention systems. The third step of using metasploit is to
+select an appropriate encoding technique to make the exploit and payload look
+like benign data, or be ignored by the target's security systems entirely. 
+
+Finally, execute the exploit. If you've chosen the exploit and payload
+correctly, the payload code will run on the target system. To minimize
+guesswork and wasted time, a pentester needs to know some basic information
+about the operating system and network configuration of the target system. 
+
+\subsection{NMAP}
+
+
+\subsection{Nessus}
+
 \subsection{Social engineering}
 
 \subsection{SQL injection}
