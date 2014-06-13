@@ -169,9 +169,9 @@ are vulnerable.
 
 A basic example of using nmap may look like this:
 
-\begin{quote}
+\begin{verbatim}
     nmap -v -A \textit{host(s)}
-\end{quote}
+\end{verbatim}
 
 What this does is run nmap with the verbose and application flags turned on,
 against a given host. Verbose means it will return extra information for each 
@@ -209,16 +209,16 @@ We do this by making an educated guess at what the SQL query may look like,
 then formatting it to do something other an intended. For example, a typical
 login form probably has a SQL query that looks something like this:
 
-\begin{quote}
+\begin{verbatim}
     SELECT * FROM users WHERE username='\%s' AND password='\%s';
-\end{quote}
+\end{verbatim}
 
 If we then pass in a username that looks like "admin'; --", we effectively
 make the statement look like this:
 
-\begin{quote}
+\begin{verbatim}
     SELECT * FROM users WHERE username='admin'; -- AND password='\%s';
-\end{quote}
+\end{verbatim}
 
 Since "--" escapes the rest of the statement, we then don't need a password,
 and are authenticated as the admin user.
