@@ -123,8 +123,6 @@ certifications, to prove you know what you're doing. However, getting real
 clients yourself, or getting involved with a good consulting company usually
 requires more than just certification; experience is the most valuable.
 
-\section*{Targets/Clients}
-
 \section*{Tools \& Techniques}
 
 \subsection*{Metasploit}
@@ -192,6 +190,61 @@ like checking server misconfigurations, denial of service attacks and
 PCI DSS (Payment Card Industry Data Security Standard) Audits.
 
 \subsection*{Social engineering}
+
+There's an adage among systems administrators which states that the only truly
+secure server is one that's powered off and unplugged from the network.
+Unfortunately, this is not a popular security strategy among companies who
+want their servers to actually serve data to the correct people. The problem
+with this idea is that the server itself has no way of knowing who the correct
+people actually are. 
+
+All of the pentesting techniques outlined so far have focused on tricking
+systems into executing code that they shouldn't, or finding out how to. Social
+engineering, on the other hand, involves getting data from authorized users
+that allows an attacker to impersonate them. 
+
+Social engineering can gain account credentials or other information necessary
+for more technical attacks. 
+
+{\bf Pretexting} is a social engineering attack that involves impersonating
+someone to whom the target thinks it's appropriate to provide the desired
+information or access. For instance, a worker with a safety vest with the
+power company's logo and a clipboard of forms can often pass unimpeded into a
+datacenter, where someone in a business suit or jeans and T-shirt would be
+questioned or restricted from access. 
+
+However, in some situations it's better not to stand out from the rest of the
+target's employees when seeking physical access. Someone dressed like the other
+workers can often gain entry to restricted areas by {\bf tailgating} an
+authorized person, following them through an ordinarily locked door.
+Tailgating is more effective when the attacker has a plausible reason to not
+open the door themself, such as carrying an armful of books or boxes. 
+
+One psychological effect that's often combined into social engineering attacks 
+is {\bf quid pro quo}, latin for "something for something". This is especially
+effective when negotiating for access or information: If the target feels that
+the attacker has gone out of their way to do something for them, he or she
+will feel obligated to repay the percieved favor. 
+
+{\bf Phishing} and {\bf spear phishing} attacks are a form of pretexting in
+which the attacker sends an email posing as an organization to whom the target
+is expected to disclose sensitive information. Phishing includes the familiar
+``Your paypal account is suspended, click here and enter your password to
+reactivate it" type of spam that we've all learned to ignore. Spear phishing
+uses phishing messages that are customized for a particular individual. For
+instance if an attacker doesn't know the target's bank password but has gotten
+their account number through other means, it sounds far more legitimate to say
+``Fraudulent activity detected on this account number, log in to view details"
+since the target is likely to assume that only their bank would know that
+their email goes with their account. 
+
+Finally, {\bf baiting} attacks don't require any direct interaction between
+the attacker and the target, but instead leverage common traits of human
+behavior. A baiting attack involves leaving an item such as a USB stick lying
+around where the target is likely to pick it up, and then simply waiting until
+the target plugs it into a computer to see who it belongs to and what it
+contains. Infected USB sticks are believed to be the vector which introduced
+the stuxnet worm to Iran's nuclear centrifuges. 
 
 \section*{Vulnerabilities}
 
